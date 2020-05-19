@@ -1,4 +1,10 @@
-/* Aula inicial :D */
+/* 
+  font-family: 'Fredoka One', cursive;
+  font-family: 'Mali', cursive;
+  font-family: 'Sacramento', cursive;
+  font-family: 'Nunito', sans-serif;
+ */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,9 +12,9 @@
 }
 
 body {
-  background: papayawhip;
+  background: #FAE6E6/*#F9CECE #E5CECE*/;
   background-size: auto 100vh;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'Nunito', sans-serif;
   /* background-image: url('https://pin.it/1QM7DFS'); 
     background-size: auto 100 vh */
   height: 100vh;
@@ -37,7 +43,7 @@ body {
 }
 
 header {
-  height: 50vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,11 +51,12 @@ header {
 
 .menu {
   /*background-color: #CFB8A3;*/
-  background-color: #E5FFD5;
+  background-color: #CCBDBD;
   position: fixed;
   width: 100vw;
   top: 0;
   z-index: 1;
+  font-family: 'Mali', cursive;
 }
 
 
@@ -60,33 +67,40 @@ header {
 
 .menu li {
   list-style: none;
+  
 }
 
 .menu a {
   display: block;
-  padding: 10px 20px;
+  padding: 12px 20px;
   transition: background-color 1s, color 1s;
 }
 
 .menu a:active,
 .menu a:hover {
-  background-color: darksalmon;
-  color:#7ACDE9;
+  background-color:  #F2CFCF;
+  color: #CCBDBD;
 }
 
 a {
   text-decoration: none;
-  color: darksalmon;
+  color: #F2CFCF;
 }
 
-a:visited {
-  color: darkseagreen;
+.menu .home{
+  padding: 6.6px 20px;
 }
-  
-a:hover {
-  text-decoration:underline;
 
-}
+/*
+  a:visited {
+    color: darkseagreen;
+  }
+    
+  a:hover {
+    text-decoration:underline;
+
+  }
+*/
 
 .titulo {
   transform: scale(0.2) translateY(50vh);
@@ -109,22 +123,23 @@ a:hover {
 .site-title, 
 .site-subtitle {
   text-align: center;
-  color: lightcoral;
+  color: #7C7575;
 }
 
 .site-title {
-  font-size: 4em;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 5em;
+  font-family: 'Fredoka One', cursive;
 }
 
 .site-subtitle {
-  font-style: italic;
+  font-family: 'Sacramento', cursive;
+  font-size: 2.4em;
   line-height: 1.8em;
 }
 
 .sobre,
 .contato,
-.portfolio {
+.interesses {
   padding: 2em;
   min-height: 100vh;
 }
@@ -139,36 +154,46 @@ a:hover {
 
 .sobre h2,
 .contato h2,
-.portfolio h2 {
-  font-family: 'Press Start 2P', cursive;
-  color: lightcoral;
+.interesses h2 {
+  font-family: 'Mali', cursive;
+  color: #7C7575;
   margin-top: 1em;
   margin-bottom: 1.5em;
   font-size: 2em;
 }
 
 .sobre p {
-  color: darksalmon;
+  color: #968F8F;
   text-indent: 1.4em;
   margin-bottom: 1.4em;
   text-align: justify;
 }
 
+.imersao-css {
+  font-style: italic;
+}
+
 .sobre a {
-  color:darkseagreen;
+  color: #968F8F;
   text-decoration: underline;
 }
 
 .sobre a:hover {
-  background-color: cyan;
+  background-color:#CCBDBD;
   text-decoration: none;
-  color: magenta;
+  color: #F2CFCF;
 }
 
 .sobre .avatar {
   clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
   margin-left: 2em;
 }
+
+  .sobre .avatar img{
+    width: auto;
+    height: 60vh;
+}
+
 
 @media (min-width: 600px) {
   .sobre .avatar {
@@ -177,19 +202,19 @@ a:hover {
   }
 }
 
-.portfolio .grid {
+.interesses .grid {
   display: grid;
   gap: 2em;
 }
 
 @media (min-width: 560px) {
-  .portfolio .grid {
+  .interesses .grid {
     grid-template-columns: 240px 240px;
   }
 }
 
 @media (min-width: 880px) {
-  .portfolio .grid {
+  .interesses .grid {
     grid-template-columns: repeat(3, 260px);
     align-content: center;
     justify-content: center;
@@ -219,31 +244,34 @@ a:hover {
   position: absolute;
   top: 0;
   width: 100%;
+  text-align: center;
+  font-size: 1.15em;
 }
 
 .card-back {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, .7);
+  background-color: rgba(204, 189, 189, 1);
+  color: #F2CFCF;
   height: 180px;
   width: 100%;
   transform: rotateY(180deg);
 }
 
-.portfolio figure {
+.interesses figure {
   text-align: center;
 }
 
-.img-portfolio {
+.img-interesses {
   height: 180px;
   width: 100%;
   object-fit: cover;
-  object-position: left bottom;
+  object-position: center;
   transition: transform 500ms;
 }
 
-/*.img-portfolio:hover {
+/*.img-interesses:hover {
   transform: scale(1.2) rotate(-2deg);
 }*/
 
@@ -253,7 +281,7 @@ a:hover {
 }
 
 .contato a {
-  color: lightcoral;
+  color: #968F8F;
   font-size: 4em;
   transition: text-shadow 1s;
 }
@@ -261,5 +289,5 @@ a:hover {
 .contato a:active,
 .contato a:hover  {
   text-decoration: none;
-  text-shadow: 0px 0px 10px rgba(150, 80, 80, 0.5);
+  text-shadow: 0px 0px 10px rgba(124, 117, 117, 0.75);
 }
