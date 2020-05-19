@@ -1,15 +1,37 @@
 /* Aula inicial :D */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  Background: papayawhip;
+  background: papayawhip;
   font-family: 'Comic Sans MS';
   /* background-image: url('https://pin.it/1QM7DFS'); 
     background-size: auto 100 vh */
   height: 100vh;
 }
 
+@media(min-width: 400px){
+  body {
+    font-size: 14px;
+  }
+}
+
+header {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .menu {
   /*background-color: #CFB8A3;*/
   background-color: #E5FFD5;
+  position: fixed;
+  width: 100vw;
+  top: 0;
 }
 
 .menu li {
@@ -18,7 +40,12 @@ body {
 
 .menu ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.menu a {
+  padding: 10px;
+  display: block;
 }
 
 a {
@@ -42,4 +69,9 @@ a:hover {
 
 .site-subtitle {
   font-style: italic;
+}
+
+.img-portfolio {
+  width: 200px;
+  height: 200px;
 }
