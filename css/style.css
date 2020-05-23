@@ -78,7 +78,7 @@ header {
 
 .menu a:active,
 .menu a:hover {
-  background-color:  #F2CFCF;
+  background-color: #F2CFCF;
   color: #CCBDBD;
 }
 
@@ -184,7 +184,9 @@ a {
   color: #F2CFCF;
 }
 
+/*
 .sobre .avatar {
+
   clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
   margin-left: 2em;
 }
@@ -192,13 +194,39 @@ a {
   .sobre .avatar img{
     width: auto;
     height: 60vh;
+  }
+
+*/
+
+  .sobre .avatar {
+    /*clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);*/
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    width: 14rem;
+    height: 14rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+
+  .sobre .avatar img{
+    width: 14rem;
+    height: 14rem;
+    /*max-width: ;*/
 }
 
 
 @media (min-width: 600px) {
   .sobre .avatar {
+   /* clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%); */
     clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    height: 20rem;
+    width: 20rem;
     float: right;
+    margin: 0 0 0 1rem;
+  }
+
+  .sobre .avatar img{
+    width: 20rem;
+    height: 20rem;
   }
 }
 
@@ -282,8 +310,9 @@ a {
 
 .contato a {
   color: #968F8F;
-  font-size: 4em;
+  font-size: 3em;
   transition: text-shadow 1s;
+  padding: 0.75rem;
 }
 
 .contato a:active,
